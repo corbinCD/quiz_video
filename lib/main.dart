@@ -1,5 +1,3 @@
-import "dart:ffi";
-
 import "package:flutter/material.dart";
 
 void main() {
@@ -16,7 +14,10 @@ void main() {
                 const SizedBox(height: 60),
                 Image.asset("assets/quiz-logo.png"),
                 const SizedBox(height: 40),
-                const Text("LearnFLUTTETrTheRightWAy" ,style: const TextStyle(color: Colors.white),),
+                const Text(
+                  "LearnFLUTTETrTheRightWAy",
+                  style: TextStyle(color: Colors.white),
+                ),
                 const SizedBox(height: 20),
                 TextButton(
                   style: TextButton.styleFrom(
