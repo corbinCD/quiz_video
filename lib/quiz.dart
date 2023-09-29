@@ -6,11 +6,10 @@ class Quiz extends StatefulWidget{
 
 @override
   State<Quiz> createState(){
-    return  Quizstate();
-    
+    return  _Quizstate();
   }
 }
-class Quizstate extends State<Quiz>{
+class _Quizstate extends State<Quiz>{
   
   @override
   
