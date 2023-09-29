@@ -1,36 +1,9 @@
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
+import "package:quiz_video/start_screen.dart";
+import "package:quiz_video/quiz.dart";
 
 void main() {
   runApp(
-    MaterialApp(
-      home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            color: Colors.purple,
-          ),
-          child: Center(
-            child: Column(
-              children: [
-                const SizedBox(height: 60),
-                Image.asset("assets/quiz-logo.png"),
-                const SizedBox(height: 40),
-                const Text(
-                  "LearnFLUTTETrTheRightWAy",
-                  style: TextStyle(color: Colors.white),
-                ),
-                const SizedBox(height: 20),
-                TextButton(
-                  style: TextButton.styleFrom(
-                    foregroundColor: Colors.white,
-                  ),
-                  onPressed: () {},
-                  child: const Text("Start qUiz"),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    ),
+   const Quiz()
   );
 }
