@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_video/questions_screen.dart';
 import "package:quiz_video/start_screen.dart";
 
 class Quiz extends StatefulWidget{
@@ -10,9 +11,22 @@ class Quiz extends StatefulWidget{
   }
 }
 class _Quizstate extends State<Quiz>{
-  
+  Widget? activeScreen;
+  // var activeScreen = 'start-screen';
+
   @override
-  
+  void initState() {
+    activeScreen = StartScreen(switchScreen);
+    super.initState();
+  }
+
+  void switchScreen(){  
+    setState((){
+      // activeScreen = 'questions-screen';
+      activeScreen = const QuestionScreen();
+    });
+  }
+  @override
   Widget build(context){    
     return MaterialApp(
       home: Scaffold(
@@ -24,9 +38,13 @@ class _Quizstate extends State<Quiz>{
               ],
               begin: Alignment.topLeft,
               end:  Alignment.bottomRight,
-            ),
           ),
-          child: const StartScreen(),
+            ),
+          child: activeScreen,
+          //if statments things 1 == thing 2 ? code to run if true : code to run if false 
+          // child: activeScreen == "start-screen" 
+          //? StartScreen(switchSCreen)
+          //: const QuestionsScreen(),
         ),
       ),
     );
