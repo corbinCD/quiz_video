@@ -3,6 +3,6 @@ import "package:quiz_video/quiz.dart";
 
 void main() {
   runApp(
-   const Quiz()
+    const Quiz(),
   );
 }

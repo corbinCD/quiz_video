@@ -3,12 +3,12 @@ import "package:quiz_video/models/quiz_questions.dart";
 //first one is the correct answer
 const questions = [
   QuizQuestion(
-    "what are the main bulding block of flutter uis",
+    "What are the main bulding block of flutter uis",
     [
       "widgets",
-      "compone",
+      "Compone",
       "Blocks",
-      "blocks",
+      "Functions",
     ],
   ),
   QuizQuestion(
