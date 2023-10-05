@@ -40,8 +40,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
                 // style: GoogleFonts.lato(
                 style: const TextStyle(
                   color: const Color.fromARGB(255, 201, 153, 251),
-                  fontFamily: "penguin",
-                  fontSize: 24,
+                  fontFamily: "SnowtopCaps",
+                  fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
                 //style: const TextStyle(

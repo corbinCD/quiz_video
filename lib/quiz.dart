@@ -3,7 +3,6 @@ import 'package:quiz_video/questions.dart';
 import 'package:quiz_video/questions_screen.dart';
 import 'package:quiz_video/results_screen.dart';
 import "package:quiz_video/start_screen.dart";
-import 'package:quiz_video/results_screen.dart';
 
 //three ways to switch screens
 
@@ -16,6 +15,7 @@ class Quiz extends StatefulWidget {
   }
 }
 
+//_ means private
 class _Quizstate extends State<Quiz> {
   Widget? activeScreen;
    List<String> selectedAnswer = [];
@@ -31,6 +31,7 @@ class _Quizstate extends State<Quiz> {
     activeScreen = StartScreen(switchScreen);
     super.initState();
   }
+  
 
   void switchScreen() {
     setState(() {
@@ -40,13 +41,17 @@ class _Quizstate extends State<Quiz> {
       );
     });
   }
-
+  void switchScreenStart(){
+    setState(() {
+    activeScreen = StartScreen(switchScreen);
+    selectedAnswer = [];
+    });
+  }
   void chooseAnswer(String answer) {
     selectedAnswer.add(answer);
     if (selectedAnswer.length == questions.length){
       setState(() {
-        activeScreen = const ResultsScreen();
-        selectedAnswer = [];
+        activeScreen = ResultsScreen(chosenAnswer: selectedAnswer, endQuiz: switchScreenStart,);
       });
     }
   }
