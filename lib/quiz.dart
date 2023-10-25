@@ -15,7 +15,7 @@ class Quiz extends StatefulWidget {
   }
 }
 
-//_ means private
+// _ means private
 class _Quizstate extends State<Quiz> {
   Widget? activeScreen;
    List<String> selectedAnswer = [];
